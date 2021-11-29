@@ -24,7 +24,7 @@
   
 #### New Functionality
 ##### Delete User
-  The Delete User function adds an entry to the deleted table in finance.db, and returns a Deltarune reference if you try to login using that user again (I didn't want to delete the data, just so I had a way to back it up just in case someone deleted their account; I also added a warning in deleted.HTML just to notify users what would happen if they inputted their username into the form).
+  The Delete User function adds an entry to the deleted table in finance.db, and returns a Deltarune reference if you try to login using that user again (I didn't want to delete the data, just so I had a way to back it up just in case someone deleted their account; I also added a warning in deleted.html just to notify users what would happen if they inputted their username into the form).
 ##### Top Ten
   The ranking system (my main drive behind my ideas for the website) is in the form of the Top Ten and Bottom Ten functions. I combine the users portfolio value, cash, and loans into a total value, and rank the users using that value. It also provides the users with a notification of how many 🍌 they owe, primarily because the more you your loans, the more inclined you will be to get them paid off in one way or another. I added the Bottom Ten function because I may have been alerted in a certain exploit, and I'm curious how far the website can be broken in that regard (REMOVE THE BROKEN ACCOUNTS OR FIGURE OUT A WAY TO INCORPORATE THE EXPLOIT, I NEED TO FIGURE OUT WHAT HAPPENS WHEN CASH EXCEEDS A CERTAIN VALUE, maybe I should reset it, I dunno).
 ##### Servitude

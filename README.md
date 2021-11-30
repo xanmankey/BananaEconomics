@@ -20,7 +20,7 @@
 ##### Sell
   The Sell function accesses the stocks in your portfolio and allows you to sell your shares of a particular stock if you so choose. Sales are tracked in the purchases table in finance.db.
 ##### History
-  The History function returns the purchases table for the user to view their previous transactions.
+  The History function returns the purchases table for the user to view their previous transactions. The time column in the table is in UTC (universal coordinated time).
 ##### Portfolio
   The Portfolio function returns the users current stock index, total cash, total loans (which will be discussed below) on GET, and notifies you whether a stock has gone up or down from your original purchasing point based on color scheme (red = loss, green = profit). I also added a liquidate button, for those who want to cash in their earnings.
   

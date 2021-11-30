@@ -4,6 +4,7 @@
 #### Website URL: https://xanmankey.pythonanywhere.com/
 ## BananaEconomics: A History
   (CLEANUP CODE AND THEN REMOVE ALL NOTES IN README)
+  CURRENT TODO: Fix datetime stuff; get it working w/ my timezone, make sure history tab and index tab work together correctly in terms of coloring and pricing, figure out what to do about exploits (Jack, Caleb, Danny, ect) and overflow errors, finish autoclicker checking functionality, hide achievements code in github from public somehow, record the video, and that's CS50!
   I have multiple projects in the works, including a machine learning phishing detection model for conducting a content analysis and a discord text-to-game input bot, but as of right now, this is the project that has had the most impact on others, and the project that I think people have enjoyed the most, so I figured I'd release it! One day as I was working on PSET9 finance, some friends asked what I was doing, and then we began to have a conversation about the website, the stock market, and how it would be a fun competitive thing to do. After a few emails, lots of debugging and error testing, a little frustration and googling, I ended up with BananaEconomic$, my personalized take on the CS50 Finance website!
 ## BananaEconomics: A Breakdown
   #### CS50 PSET9 Functionality
@@ -46,5 +47,3 @@ A special thanks to the CS50 team for getting me started on my coding journey! I
 Thanks to IEX for a quick and easy way to access a simulated stock index!
 Thanks to Toby Fox, for making Deltarune chapter 1 and 2, which I referenced and used media from throughout (Seen in the static folder).
 Thanks to my friends, for helping me test and debug my website, catching many errors that I would've overlooked otherwise.
-  
-(I still need to make sure that my prize for completing all the achievements works, I'LL DO THIS AT HOME!)

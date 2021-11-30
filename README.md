@@ -10,7 +10,7 @@
 ##### Register
   The Register function adds an entry to the users table in finance.db with significant information and initializes a session_id to validate to the program that the user is the current user is the owner of the created account. Once registered, a user is provided with $10,000.
 ##### Log in/Log out
-  The log in and log out functions manipulate and validate session, as well as check against the datatable using session['user_id'] as an indicator to check if the user is logged in or not.
+  The log in and log out functions manipulate and validate session, as well as check against the datatable using session['user_id'] as an indicator to check if the user is logged in or not. I also added basic censorship for certain names.
 ##### Quote
   The Quote function uses the IEX stock index and the predefined function (thanks again, CS50) lookup in helpers.py to return stock name, price , and symbol when a stock symbol is inputted.
 ##### Buy

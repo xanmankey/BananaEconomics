@@ -21,10 +21,9 @@
   The History function returns the purchases table for the user to view their previous transactions. The time column in the table is in UTC (Coordinated Universal Time).
 ##### Portfolio
   The Portfolio function returns the users current stock index, total cash, total loans (which will be discussed below) on GET, and notifies you whether a stock has gone up or down from your original purchasing point based on color scheme (red = loss, green = profit). I also added a liquidate button, for those who want to cash in their earnings.
-##### Other Important Functions
-###### Apology
+##### Apology
   Returns an apology providing information regarding the error or a message of some sort
-###### Lookup
+##### Lookup
   Access and get data from the IEX database by inputting a stock symbol
   
 #### New Functionality

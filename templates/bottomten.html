@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    BOTTOM TEN!
+{% endblock %}
+
+{% block main %}
+    <ol action='/topten'>
+        {% for i in length %}
+        <li style='font-size:30px;font-weight:bold;color:black;'>
+            {{ username[loop.index0] }}
+            <div style='font-size:20px;font-weight:bold;color:black;'>
+                With a portfolio value of ${{ portfolioValue[loop.index0] }}!!!
+            </div>
+            <div>
+                And {{ bananas[loop.index0] }} 🍌
+            </div>
+        </li>
+        {% endfor %}
+    </ol>
+
+{% endblock %}

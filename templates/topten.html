@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    TOP TEN!
+{% endblock %}
+
+{% block main %}
+    <ol action='/topten'>
+        {% for i in length %}
+        <li style='font-size:30px;font-weight:bold;color:black;'>
+            {% if achieved[loop.index0] == 0 %}
+                🌟{{ username[loop.index0] }}
+            {% else %}
+                {{ username[loop.index0] }}
+            {% endif %}
+            <div style='font-size:20px;font-weight:bold;color:black;'>
+                With a portfolio value of <div style='color:green'> ${{ portfolioValue[loop.index0] }}!!! </div>
+            </div>
+            <div style='font-size:20px;font-weight:bold;color:black;'>
+                And {{ bananas[loop.index0] }} 🍌 owed
+            </div>
+        </li>
+        {% endfor %}
+    </ol>
+
+{% endblock %}

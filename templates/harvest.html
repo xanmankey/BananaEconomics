@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Banana Harvest!
+{% endblock %}
+
+<!-- block scripts allows you to use a js script-->
+<!-- I couldn't figure out how to log to console in js, so I'll have to be careful here -->
+{% block scripts %}
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+{% endblock scripts %}
+
+{% block main %}
+    <!-- The actual harvesting -->
+    <!-- I'm making bananas seperate from money here -->
+    <!-- Limit of 5000 bananas a day -->
+    <!-- onclick is not working -->
+    <img src='static/bananaTree.png' alt='bananaTree' onclick='clicked()'>
+    <!-- I need to figure out how to create a counter that I can pass to the post method on the button click, so I'll have to store that w/ js-->
+    <div class="form-group">
+        <button class="btn btn-primary" id='wages' type="button" onclick='wageGet()'>Wages: </button>
+    </div>
+
+    <p>
+        (As of right now, the banana plantation is open and accepting indentured servants who want to pay of their debt)
+    </p>
+
+    <!-- In order for onclick to work, the functions need to be defined in the body below the original html tags -->
+    <!-- You can view console.log by using website developers, but unfortunately that's blocked on the chromebook -->
+    <script>
+
+        var bananas = 0;
+
+        function clicked()
+        {
+            // I find the best way to debug js w/ flask to be using alerts (at least for now)
+            bananas++;
+            // alert("bananas: " + bananas);
+
+            // Template literals to insert a variable as a string
+            // No console.logs returning?
+            // console.log("Before bad request???");
+            document.getElementById("wages").innerHTML=`Collect ${bananas / 100}.`;
+            console.log(bananas);
+        }
+
+        function wageGet()
+        {
+            // When working w/ ajax calls, you should call $(document).ready(function(){}) first
+            // Because Ajax will often not work properly unless the html is fully loaded
+            // Also, remember that when working w/ js use the ctrl shift j console to debug
+
+            // My ajax calls were not initially working because the layout file was using the slim version of jQuery
+            $(document).ready(function(){
+                $.post({
+                url: '/bananaHarvest',
+                type: 'POST',
+                contentType: 'application/json;charset=UTF-8',
+                // data is { parameter, value }, which can then be accessed w/ request.form['parameter']
+                data: JSON.stringify({ item: bananas }),
+                success: function(response) {
+                    console.log(response);
+                    // For some reason this needs to be added for the redirect to actually work following the post method
+                    window.location = "/";
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+            });
+        }
+    </script>
+{% endblock %}

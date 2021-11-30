@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Get a Loan!
+{% endblock %}
+
+{% block main %}
+    <form action="/getloan" method="post">
+        <div class="form-group">
+            <input autofocus='on' autocomplete='off' class="form-control" name="loanAmount" placeholder="loanAmount" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Get Loan?</button>
+        <p style='color:green;font-size:30px'>
+            Click the button to get a [gr8t deal]!
+        </p>
+        <p style='font-size:15px;font-family:Serif'>
+            Your loans will accrue interest at a rate of 2% 🍌 per day. Your loans will count against the total value of your portfolio,
+            where 1 🍌 is equal to 1 dollar.
+        </p>
+        <p style='font-size:15px;font-family:Serif;color:green;'>
+             🎄 Holiday Bonus: if you log in on January first, you're exponential interest will get reset (but you will keep the current penalty on
+            your 🍌)
+        </p>
+    </form>
+    <audio controls='controls' src="static/spamton happy theme (A Real Boy !)-craxtlfhLWs.mp3" autoplay='true' style='display:none;'>
+
+{% endblock %}

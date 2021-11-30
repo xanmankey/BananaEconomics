@@ -1,0 +1,28 @@
+<!-- I'd like to also make a popup that indicates when you've gotten an achievement -->
+<!-- I'm going to make one "hidden" (???) achievement -->
+{% extends 'layout.html' %}
+
+{% block titile %}
+    Your Achievements
+{% endblock %}
+
+{% block main %}
+    <p style='color:black;font-family:fantasy;font-weight:800'>
+        Each completed achievement gives you a bonus of $500 (with the exception of the 9th achievement,
+        which gives $1000 because it felt obscure enough to warrant it to me, and the first achievement, because all it requires
+        is the creation of an account)
+    </p>
+    <ul>
+        {% for i in achievements %}
+            {% if achieved[loop.index0] == 'ACHIEVED!!!' %}
+            <li style='color:green;font-family:fantasy;font-weight:700'>
+                {{ achievements[loop.index0] }}
+            </li>
+            {% else %}
+            <li style='color:red;font-family:fantasy;font-weight:700'>
+                {{ achievements[loop.index0] }}
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}

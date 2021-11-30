@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <!-- The method attribute tells the browser how to send data to the server. Post is necessary when sending data to a database or sending sensitive information.-->
+    <!-- The action attribute specifies where to send the form data when submitted -->
+    <form action="/register" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="confirmation" placeholder="Password confirmation" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+         <!-- the bootstrap submit type button submits the current data of the form according to the specified form method-->
+    </form>
+{% endblock %}

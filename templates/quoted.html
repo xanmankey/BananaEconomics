@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <!-- The method attribute tells the browser how to send data to the server. Post is necessary when sending data to a database or sending sensitive information.-->
+    <!-- The action attribute specifies where to send the form data when submitted -->
+    <!-- quoted.html takes the return information from the lookup function and returns the information of the stock -->
+    <!-- REMEMBER: If you loop w/ jinja, create the table or list outside of the loop (unless you want to create multiple instances instead of just multiple rows -->
+    <!-- Also make sure to include var passed over inside double curly braces; and remember that jinja doesn't take html comments into account, so don't comment out jinja code  -->
+     <p>
+         A share of {{ stocks['name'] }} ({{ stocks['symbol'] }}) costs {{ price }}.
+     </p>
+
+{% endblock %}

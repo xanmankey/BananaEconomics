@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Transaction History
+{% endblock %}
+
+{% block main %}
+    <table class='table' style='width:100%'>
+        <thead>
+            <tr>
+                <th>
+                    Stock
+                </th>
+                <th>
+                    Symbol
+                </th>
+                <th>
+                    Number of Shares
+                </th>
+                <th>
+                    Transaction
+                </th>
+                <th>
+                    Share Value
+                </th>
+                <th>
+                    Total Value
+                </th>
+                <th>
+                    Time
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(stocks) %}
+            <tr>
+                {% if LIGHT == i %}
+                <td>
+                    <!-- I don't know if this will work at all, but I can try-->
+                    <form action="/history" method="post">
+                        <button type='submit'>{{ name[loop.index0] }}</a>
+                    </form>
+                </td>
+                {% else %}
+                <td>
+                    {{ name[loop.index0] }}
+                </td>
+                {% endif %}
+                <td>
+                    {{ symbol[loop.index0] }}
+                </td>
+                <td>
+                    {{ shares[loop.index0] }}
+                </td>
+                <td>
+                    {{ transactions[loop.index0] }}
+                </td>
+                <td>
+                    ${{ price[loop.index0] }}
+                </td>
+                <td>
+                    ${{ totalPrice[loop.index0] }}
+                </td>
+                <td>
+                    {{ time[loop.index0] }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p>Time is in UTC (Coordinated Universal Time)</p>
+{% endblock %}

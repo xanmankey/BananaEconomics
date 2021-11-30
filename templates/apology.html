@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    <!--
+    <img alt="{{ top }}" class="border" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i.imgur.com/CsCgN7Ll.png" title="{{ top }}">
+    -->
+    <!-- /pset9/finance/static/ -->
+    <img src='static/29525db076bcc42505a356e55dbe94f38b28530b_getty-stock-market-data.jpg' alt='{{ top }}' class='border' title='{{ top }}'>
+    <p style="position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);color:white;font-size:50px;font-weight:bold">{{ top | urlencode }}/{{ bottom | urlencode }}</p>
+{% endblock %}

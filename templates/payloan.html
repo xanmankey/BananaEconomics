@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    PAY LOAN
+{% endblock %}
+
+{% block main %}
+    <form action="/payloan" method="post">
+        <img src='static/loan_shark.png' alt='Pay loan'>
+        <div class="form-group">
+            <input autofocus='on' autocomplete='off' class="form-control" name="amountPaid" placeholder="amount of 🍌 to pay off" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit" style='900'>PAY 🍌</button>
+    </form>
+    <audio controls='controls' src="static/Deal Gone Wrong-cfvB-bVpH7Y.mp3" autoplay='true' style='display:none;'>
+{% endblock %}

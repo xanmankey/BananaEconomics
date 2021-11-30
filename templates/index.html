@@ -1,0 +1,97 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Your Portfolio
+{% endblock %}
+
+{% block main %}
+
+{% if j == i %}
+    <p>
+        No stocks yet (maybe try purchasing some?)
+    </p>
+    <p style='font-weight:bold;'>
+        Total Value of your Portfolio
+        <div style='color:green;'>
+            ${{portfolioTotal}}
+        </div>
+    </p>
+    <p style='font-weight:bold;color:black;line-height:50%;'>
+        Current funds available
+        <div style='color:green;'>
+        ${{cash}}
+        </div>
+    </p>
+{% else %}
+    <table class='table' style='width:100%'>
+        <thead>
+            <tr>
+                <th>
+                    Stock
+                </th>
+                <th>
+                    Symbol
+                </th>
+                <th>
+                    Number of Shares
+                </th>
+                <th>
+                    Share Value
+                </th>
+                <th>
+                    Total Value
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+            <tr>
+                {% if transactions[loop.index0] == none %}
+
+                {% else %}
+                    <td>
+                        {{ name[loop.index0] }}
+                    </td>
+                    <td>
+                        {{ symbol[loop.index0] }}
+                    </td>
+                    <td>
+                        {{ shares[loop.index0] }}
+                    </td>
+                    {% if transactions[loop.index0] <= price[loop.index0] %}
+                    <td style='color:green'>
+                        ${{ price[loop.index0] }}
+                    </td>
+                    <td style='color:green'>
+                        {{ totalPrice[loop.index0] }}
+                    </td>
+                    {% else %}
+                    <td style='color:red'>
+                        ${{ price[loop.index0] }}
+                    </td>
+                    <td style='color:red'>
+                        {{ totalPrice[loop.index0] }}
+                    </td>
+                    {% endif %}
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p style='font-weight:bold;color:green;'>
+        Total Value of your Portfolio: ${{portfolioTotal}}
+    </p>
+    <p style='font-weight:bold;color:green;line-height:50%;'>
+        Current funds available: ${{cash}}
+    </p>
+    <p style='font-weight:bold;color:green;line-height:50%;'>
+        Website Ranking: {{placement}}/{{numUsers}}
+    </p>
+    <form action="/" method="post">
+        <button class="btn btn-primary" type="submit" style='font-weight:bold'>SELL ALL?</button>
+    </form>
+{% endif %}
+{% if achieved == 0 %}
+    <audio controls='controls' src="static/17 - Ending - Super Mario Bros 2 (FDS).mp3" autoplay='true' style='display:none;'>
+{% endif %}
+{% endblock %}

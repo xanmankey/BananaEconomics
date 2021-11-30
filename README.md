@@ -21,7 +21,7 @@
 ##### History
   The History function returns the purchases table for the user to view their previous transactions.
 ##### Portfolio
-  The Portfolio function returns the users current stock index, total cash, total loans (which will be discussed below) on GET, and notifies you whether a stock has gone up or down from your original purchasing point based on color scheme (red = loss, green = profit). I also added a liquidate button, for those who want to cash in their earnings (DOES SELL ALL WORK WITH HISTORY? I DON'T THINK IT DOES, I NEED TO GET HISTORY WORKING IN GENERAL).
+  The Portfolio function returns the users current stock index, total cash, total loans (which will be discussed below) on GET, and notifies you whether a stock has gone up or down from your original purchasing point based on color scheme (red = loss, green = profit). I also added a liquidate button, for those who want to cash in their earnings.
   
 #### New Functionality
 ##### Delete User

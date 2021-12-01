@@ -533,6 +533,8 @@ def loan():
     if request.method == "POST":
         # Check loan amount, prior loans, and prior cash
         loanAmount = request.form.get('loanAmount')
+        if int(loanAmount) <= 0:
+            return apology("Invalid loan amount")
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session['user_id'])
         cash = cash[0]['cash']
         db.execute("UPDATE users SET bananas = 0 WHERE bananas is NULL")

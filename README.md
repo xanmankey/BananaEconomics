@@ -44,7 +44,7 @@
   I still have ideas for this website, although I haven't decided whether I want to implement them or move on yet. I took up almost the entirety of the navbar however, and that, along with people having fun and being competitive and strategic on the website, has given me some closure for this project. I may add new functionality (achievements, pages, and more) in the future though, I will update the readMe if I ever decide to do so! If you have any ideas, feel free to reach out and let me know!
 
 ## Credits
--A special thanks to the CS50 team for getting me started on my coding journey! I'd never be where I was without you.
--Thanks to IEX for a quick and easy way to access a simulated stock index!
--Thanks to Toby Fox, for making Deltarune chapter 1 and 2, which I referenced and used media from throughout (Seen in the static folder).
--Thanks to my friends, for helping me test and debug my website, catching many errors that I would've overlooked otherwise.
+- A special thanks to the CS50 team for getting me started on my coding journey! I'd never be where I was without you.
+- Thanks to IEX for a quick and easy way to access a simulated stock index!
+- Thanks to Toby Fox, for making Deltarune chapter 1 and 2, which I referenced and used media from throughout (Seen in the static folder).
+- Thanks to my friends, for helping me test and debug my website, catching many errors that I would've overlooked otherwise.

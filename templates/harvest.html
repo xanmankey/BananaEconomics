@@ -11,8 +11,7 @@
 
 {% block main %}
     <!-- The actual harvesting -->
-    <!-- I'm making bananas seperate from money here -->
-    <!-- Limit of 5000 bananas a day -->
+    <!-- Limit of 5000 bananas a day; bananas are seperate from cash, as they can be worked off, but also accrue interest -->
     <img src='static/bananaTree.png' alt='bananaTree' onclick='clicked()'>
     <div class="form-group">
         <button class="btn btn-primary" id='wages' type="button" onclick='wageGet()'>Wages: </button>
@@ -28,11 +27,8 @@
 
         function clicked()
         {
-            // I find the best way to debug js w/ flask to be using alerts (at least for now)
             bananas++;
 
-            // Template literals to insert a variable as a string
-            // No console.logs returning?
             document.getElementById("wages").innerHTML=`Collect ${bananas / 100}.`;
             console.log(bananas);
         }
@@ -41,8 +37,7 @@
         {
             // When working w/ ajax calls, you should call $(document).ready(function(){}) first
             // Because Ajax will often not work properly unless the html is fully loaded
-
-            // My ajax calls were not initially working because the layout file was using the slim version of jQuery
+            // Also when using ajax remember to use the full version of jQuery (layout.html initially provided the slim version)
             $(document).ready(function(){
                 $.post({
                 url: '/bananaHarvest',

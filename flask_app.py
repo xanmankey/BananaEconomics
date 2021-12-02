@@ -364,7 +364,7 @@ def quote():
             db.execute("UPDATE achievements SET achieved = ? WHERE id = 10 AND user_id = ?", "ACHIEVED!!!", session['user_id'])
             cash = db.execute("SELECT cash FROM users WHERE id = ?", session['user_id'])
             cash = cash[0]['cash']
-            db.execute("UPDATE users SET cash = ? WHERE id = ?", cash[0]['cash'] + 500, session['user_id'])
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", cash + 500, session['user_id'])
             return render_template("quoted.html", stocks=stocks, price=usd(stocks['price']))
 
         return render_template("quoted.html", stocks=stocks, price=usd(stocks['price']))

@@ -16,7 +16,7 @@
             <li style='color:green;font-weight:700'>
                 {{ achievements[loop.index0] }}
             </li>
-            {% else %}
+            {% elif achieved[loop.index0] == 'not achieved...' %}
             <li style='color:red;font-weight:700'>
                 {{ achievements[loop.index0] }}
             </li>

@@ -462,6 +462,7 @@ def register():
         elif len(request.form.get('username')) > 20:
             return apology("Sorry, usernames must be less than 20 characters long!")
         # Passwords are then hashed to an id and stored for safety reasons
+        profanity.load_censor_words()
         user = request.form.get('username')
         user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", profanity.censor(user),
         generate_password_hash(request.form.get('password')))

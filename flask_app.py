@@ -403,6 +403,8 @@ def topTen():
 def bottomTen():
     # Included to benefit people who found exploits, as well as punish those who cause integer overflow trying to take advantage of said exploits
     db.execute("UPDATE users SET bananas = 0 WHERE bananas is NULL")
+    # Initialization if not yet initialized
+    db.execute("UPDATE users SET totalValue = 10000 WHERE totalValue is NULL")
     topTentmp = db.execute("SELECT username, totalValue, bananas FROM users GROUP BY username ORDER BY totalValue ASC LIMIT 10")
     topTenUser = [None] * len(topTentmp)
     topTenValue = [None] * len(topTentmp)

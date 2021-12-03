@@ -594,6 +594,8 @@ def payloan():
     if request.method == "POST":
         # Pay off the loan using available funds
         amountPaid = request.form.get('amountPaid')
+        if int(float(loanAmount)) <= 0:
+            return apology("Invalid loan amount")
         try:
             float(amountPaid)
         except ValueError:

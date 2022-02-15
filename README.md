@@ -3,7 +3,8 @@
 #### Video Demo:  https://youtu.be/HUKrki-4cYw
 #### Website URL: https://xanmankey.pythonanywhere.com/
 ## BananaEconomics: A History
-  I have multiple projects in the works, including a machine learning phishing detection model for conducting a content analysis and a discord text-to-game input bot, but as of right now, this is the project that has had the most impact on others, and the project that I think people have enjoyed the most, so I figured I'd release it! One day as I was working on PSET9 finance, some friends asked what I was doing, and then we began to have a conversation about the website, the stock market, and how it would be a fun competitive thing to do. After a few emails, lots of debugging and error testing, a little frustration and googling, I ended up with BananaEconomic$, my personalized take on the CS50 Finance website!
+# It's ok to post this, as long as I hide the API Key somehow
+  One day as I was working on PSET9 finance, some friends asked what I was doing, and then we began to have a conversation about the website, the stock market, and how it would be a fun competitive thing to do. After a few emails, lots of debugging and error testing, a little frustration and googling, I ended up with BananaEconomic$, my personalized take on the CS50 Finance website!
 ## BananaEconomics: A Breakdown
   This code is mainly for educational purposes; if you want to test it, you will need an api key for iexcloud.io, you can see steps for obtaining an api key at https://cs50.harvard.edu/x/2021/psets/9/finance/ underneath "Configuring" (thank you CS50)! Also, the server side files will update over time, and I may do occassional maintinence based on requests, but the files uploaded are the version as of December 1st, 2021.
   #### CS50 PSET9 Functionality

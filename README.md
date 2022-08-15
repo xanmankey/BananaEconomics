@@ -1,4 +1,5 @@
 # BananaEconomics
+**ⓘ: The website is currently not hosted, but I still wanted to archive the code for comparison and organization.**
 ## Important Links
 #### Video Demo:  https://youtu.be/HUKrki-4cYw
 #### Website URL: https://xanmankey.pythonanywhere.com/
